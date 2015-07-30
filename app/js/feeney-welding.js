@@ -43,26 +43,24 @@ $(document).ready(function() {
     }, 4000);
   }
 
-
   /**
    * Check if we have the masonry elem on the page, if so then we will build the photo gallery.
    * The photo gallery will load each image using Ajax, because all 53 take a long time, especially
    * on a slow server, it's crazy.
    */
   var $feeneyMasonry = $('#feeneyMasonry'),
+      feeneyLoader = $('#feeneyLoader'),
       feeneyLoader,
       fenceImages,
-      $msnry,
       imgCount = 0;
-
   if ($feeneyMasonry.length) {
     // We know that we are on the portfolio page, so release the page loading icon early
-    $loader.fadeOut(690);
+    $('#loader').fadeOut(890);
 
     // Make loading image
-    feeneyLoader = $('#feeneyLoader');
+
     // load the images on each fence slide
-    fenceImages = $feeneyMasonry.find('img');
+    var fenceImages = $feeneyMasonry.find('img');
 
     fenceImages.each(function (cur, ind) {
       imgCount++;
@@ -84,7 +82,7 @@ $(document).ready(function() {
     });
 
 
-    $msnry = $feeneyMasonry.masonry({
+    var $msnry = $feeneyMasonry.masonry({
       itemsSelector: '.fence-slide'
     });
     $msnry.imagesLoaded(function () {
@@ -139,6 +137,7 @@ $(document).ready(function() {
 
   /**
    * Contact Form.
+   *
    */
   var contactForm = $('#contactForm');
 
@@ -156,8 +155,8 @@ $(document).ready(function() {
         success: function(res) {
 
           if (res && res.success && res.message) {
-            output = '<div><h3>Thank You very much.<\/h3>';
-            output += '<p>' + res.message + '<\/p><\/div>';
+            output = '<div><h3>Thank You very much.</h3>';
+            output += '<p>' + res.message + '</p></div>';
             contactForm.html(output);
           }
         }
@@ -168,7 +167,7 @@ $(document).ready(function() {
 
   /**
    * Google Map
-   *   --- Decided to display at the bottom of each page.
+   *  --- Decided to put this at the bottom of 3 pages instead of only contact.
    */
   var mapOnPage = ($('.map').length > 0);
   if (mapOnPage) {
