@@ -1,0 +1,21 @@
+# humanstxt.org/
+# The humans responsible & technology colophon
+
+# TEAM
+
+    <name> -- <role> -- <twitter>
+    Michael Rosata -- Lead Developer -- @onethingsimple
+
+# THANKS
+
+    All our loyal fans who listened to our music throughout the years.
+    wait...
+
+# TECHNOLOGY COLOPHON
+
+    HTML5, CSS3, PHP, JavaScript,
+    jQuery, Modernizr,
+    Masonry with Imagesloaded and Isotope,
+
+    Google Maps API v3, Facebook API,
+    Node w/Gulp, Stylus and Browser Sync

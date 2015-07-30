@@ -1,0 +1,334 @@
+// Some of these are used in other .styl files
+overlay-color = #008402
+navbar-border = rgba(255,255,255,0.15)
+feeney-secondary = #FF7E00
+feeney-background = #F8FCF9
+page-green = #4D8646
+feeney-green = #3a723a
+dark-green = #316711
+
+
+large-logo-font = Raleway,"Helvetica Neue",Helvetica,Arial,sans-serif
+//large-logo-font = 'Squada One', cursive;
+
+#feeneyFB
+  display none
+
+@import 'components/_enmit'
+@import 'components/_responsive'
+
+body a.feeney-link
+  &:link
+    color dark-green
+  &:active
+    color dark-green
+  &:hover
+    color feeney-secondary
+  &:visited
+    color dark-green
+
+body .main-content
+  background-color feeney-background
+
+
+.navbar-brand
+  width 100px
+  height auto
+  position absolute
+  left 10px
+  top -6px
+  img
+    width 100%
+    height auto
+  @media (min-width: 768px)
+    width 120px
+    top 17px
+
+// make the logo move up when navbar gets smaller
+.navbar-shrink .navbar-brand
+  @media (min-width: 768px)
+    top -8px
+.nav.navbar-nav
+  @media (max-width: 692px)
+    margin-left: 40px
+
+header
+  .container
+    .overlay
+      background-image: url('../images/giant-background.jpg')
+      background-size: 120%
+
+  .intro-text .intro-heading .inc
+    text-transform lowercase
+    //font-family 'Dancing Script', cursive
+    font-weight 700
+    font-size 39px
+    display block
+    margin-top -1px
+    .fa-google-plus
+      margin-bottom 3px
+
+
+.feeney-area-heading
+  padding 0px 0 36px
+  text-align center
+  p
+    font-family "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif
+    font-size 13px
+    padding 0 66px
+    line-height 2
+    color #6a6a6a
+  h5
+    font-family Merriweather
+    font-size 23px
+    font-weight 300
+  h3
+    text-transform uppercase
+    font-size 43px
+    margin-bottom 28px
+    span
+      display block
+      letter-spacing 0.2em
+      font-size 12px
+      color #555
+      font-weight 400
+      padding 5px 0 0
+  @media (min-width: 768px)
+    p
+      font-size 15px
+      padding 0 76px
+    h5
+      font-size 26px
+    h3
+      font-size 44px
+      margin-bottom 34px
+
+
+body.index
+  p
+    .em
+      font-weight 700
+      color feeney-secondary
+      text-transform uppercase
+  .contact-link
+    font-size 1.125em
+    color feeney-green
+    transition .1s all
+    &:hover
+      font-size 1.125em
+      color feeney-secondary
+      text-decoration underline
+  .content-head .ico
+    padding: 16px 15px;
+    a
+      margin-right -1px
+      margin-bottom -5px
+  .feeney-facebook
+    min-height 585px
+    padding 1em
+    .facebook-feed > div
+      border 1px solid #555
+  .testimonial-item
+    min-height 100px
+    display none
+    &.active
+      display block
+  .dark
+    color feeney-green
+
+  .feeney-previews
+    p
+      text-indent 1em
+  .home-mini-heading
+    color feeney-secondary
+    text-transform uppercase
+    text-align center
+    font-size 21px
+    a:hover
+      color feeney-secondary
+  .portfolio-preview
+    text-align center
+    img
+      border 1px solid #444
+      margin .33em
+      cursor pointer
+      transition .4s all
+      transform scale(1)
+      &:hover
+        transform scale(1.015)
+
+body.services
+  .content-head .ico
+    padding 16px 15px -14px
+    top -55px
+    a
+      margin-right -4px
+// slideshow
+  .owl-controls .owl-buttons div
+    background-color feeney-secondary
+    border-radius 4px
+    border 1px solid #f5f5f5
+    margin-top -40px
+    &:hover
+      border 1px solid black
+  .owl-next
+  .owl-prev
+    top 39%
+  #quote-slider .owl-wrapper-outer
+    .item
+      padding-bottom 0
+      .quote-left
+      .quote-right
+      .quote-sep
+        margin-top 0
+  #quote-slider div.owl-wrapper-outer
+    p
+      line-height 1.33
+      margin-top -50px
+  .owl-pagination
+    position absolute
+    left 50%
+    transform translateX(-50%)
+    bottom 5px
+  #testimonials .owl-page span
+  #testimonials .owl-page.active span
+    width 15px
+    height 15px
+
+
+
+body.portfolio
+  .fence-slide
+    display none
+    padding 2px
+    .wrapper
+      padding 0
+      margin 0
+      width 100%
+      height 100%
+      border 1px solid #555
+      overflow hidden
+      img
+        width 100%
+        height auto
+        transition .45s all ease-in-out
+        cursor pointer
+        &:hover
+          transform scale(1.06)
+    width 50%
+    @media(min-width:768px)
+      width 33%
+    @media(min-width:992px)
+      width 25%
+      padding 2px
+
+body.portfolio
+  .portfolio-info
+    font-size 1.04em;
+    a
+      color feeney-secondary
+      font-weight bold
+      &:hover
+        color: feeney-green
+
+  #masonryControls
+    .nav-tabs
+      padding-left 0
+      margin-bottom 0
+      list-style none
+      font-size 14px
+      line-height 1.42857143
+      li
+        float left
+        margin-bottom -1px
+        border 1px solid transparent
+        margin-right 2px
+        position relative
+        display block
+        padding 15px 11px 10px 7px
+        &.active
+          a
+            color feeney-secondary
+
+  .content-head
+  .ico
+    padding 13px 0px
+
+#feeneyLoader
+  width 100%
+  margin-top 0
+  height 1px
+  display relative
+  text-align center
+  img
+    position absolute
+    left 50%
+    top 87px
+    -webkit-transform translateX(-50%)
+    -moz-transform translateX(-50%)
+    transform translateX(-50%)
+
+// Contact Page Form
+body.contact
+  .content-head .ico
+    padding: 16px 15px;
+    a
+      margin-right -4px
+      margin-bottom -32px;
+  .contact-form
+    margin-top 24px
+  form.c-form
+    input, textarea
+      border 1px solid feeney-secondary
+      &:focus
+        border 1px solid transparent
+        font-size 15px
+    input[name="birth-name"]
+      visibility hidden
+      width 1px
+      height 1px
+      position absolute
+      top -600px
+      left -1999px
+
+// Contact icons and text (under map)
+ul.contact-info
+  box-sizing border-box
+  width 100%
+  li
+    position relative
+    text-align center
+    margin 0
+    width 33%
+    .contact-text
+      position absolute
+      width 100%
+      text-align inherit
+      left 0
+
+
+// The map container
+  .container-fluid.container-map {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+.large-spacer
+  display block
+  height 68px
+
+.small-spacer
+  display block
+  height 32px
+
+// Stayshine Footer
+footer
+  background #222222
+  color #f8efc0
+  .stayshine-info
+    padding 8px
+    color #f8efc0
+    h3
+      margin-top 0
+      em
+        color feeney-secondary
