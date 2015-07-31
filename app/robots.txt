@@ -1,5 +1,7 @@
 # www.robotstxt.org/
 
+# Stayshine Web Developers
+# 23x3.stayshine.com -
 # Allow crawling of all content
 User-agent: *
 Disallow:
